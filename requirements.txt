@@ -1,0 +1,12 @@
+openai>=1.60.0
+streamlit>=1.41.1
+llama-index==0.12.12
+tiktoken==0.8.0
+tensorflow==2.18.0
+tensorflow_hub==0.16.1
+nltk~=3.9.1
+beautifulsoup4~=4.12.3
+lxml
+google-auth
+streamlit-authenticator
+pyyaml~=6.0.2

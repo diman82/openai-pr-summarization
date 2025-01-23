@@ -1,0 +1,14 @@
+credentials:
+  usernames:
+    diman82:
+      email: diman82@gmail.com
+      name: diman82
+      failed_login_attempts: 0 # Will be managed automatically
+      password: Master82  # hashed password
+cookie:
+  expiry_days: 180
+  key: data_infra_key # Must be string
+  name: data_infra_cookie
+pre-authorized:
+  emails:
+  - diman82@gmail.com

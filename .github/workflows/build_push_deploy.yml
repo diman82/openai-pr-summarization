@@ -1,0 +1,123 @@
+name: Deploy to playground Amazon ECS
+
+on:
+  pull_request:
+    types: [opened, synchronize, closed]
+    branches: [master]
+  workflow_dispatch:
+
+jobs:
+  build_and_push_container_image:
+    name: Build and push container image
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Configure AWS credentials
+      uses: aws-actions/configure-aws-credentials@v2
+      with:
+        aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+        aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        aws-region: ${{ vars.AWS_REGION }}
+        mask-aws-account-id: false
+    - name: Login to Amazon ECR
+      id: login-ecr
+      uses: aws-actions/amazon-ecr-login@v1
+    - name: Checkout
+      uses: actions/checkout@v3
+    - name: Set up Docker Buildx
+      uses: docker/setup-buildx-action@v2
+    - name: Prepare build arguments
+      id: prepare-arguments
+      env:
+        BRANCH_NAME: ${{ (github.event.pull_request.merged && github.base_ref) || github.head_ref || github.ref_name }}
+        COMMIT_SHA: ${{ github.event.after || github.sha }}
+        ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}
+      run: |
+        echo "commit_sha=$COMMIT_SHA" >> "$GITHUB_OUTPUT"
+        echo "branch_name=$BRANCH_NAME" >> "$GITHUB_OUTPUT"
+        COMMIT_TIMESTAMP="$(git show --no-patch --format=%cI)"
+        echo "commit_timestamp=$COMMIT_TIMESTAMP" >> "$GITHUB_OUTPUT"
+        IMAGE_NAME="${{ env.ECR_REGISTRY }}/${{ github.event.repository.name }}"
+        echo "IMAGE_NAME=$IMAGE_NAME" >> "$GITHUB_ENV"
+        # Generate metadata JSON
+        BUILD_METADATA="$( \
+          jq --null-input --compact-output '{"buildMetadata": {"labels": $ARGS.named}}' \
+            --arg     org.opencontainers.image.revision "$COMMIT_SHA" \
+            --arg     org.opencontainers.image.source "${{ github.server_url }}/${{ github.repository }}" \
+            --arg     com.seekingalpha.image.repository "${{ github.repository }}" \
+            --arg     com.seekingalpha.image.branch "$BRANCH_NAME" \
+            --argjson com.seekingalpha.image.release "${{ github.ref_name == github.event.repository.default_branch }}" \
+            --arg     com.seekingalpha.image.timestamp "$COMMIT_TIMESTAMP" \
+            --argjson com.seekingalpha.image.pr "${{ github.event.pull_request.number || 'null' }}" \
+            --arg     com.seekingalpha.image.ci.url "${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}/attempts/${{ github.run_attempt }}" \
+            --argjson com.seekingalpha.image.ci.run_id "${{ github.run_id }}" \
+            --argjson com.seekingalpha.image.ci.run_attempt "${{ github.run_attempt }}" \
+        )"
+        # Convert JSON to arguments list
+        echo "IMAGE_LABELS<<EOF" >> "$GITHUB_ENV"
+        echo "$BUILD_METADATA" | jq --raw-output '.buildMetadata.labels | to_entries | map("\(.key)=\(.value)") | join("\n")' >> "$GITHUB_ENV"
+        echo "EOF" >> "$GITHUB_ENV"
+        echo "GITHUB_REF_NAME is $GITHUB_REF_NAME"
+        if [ "$GITHUB_REF_NAME" = "${{ github.event.repository.default_branch }}" ]
+        then
+          # Release build
+          LABELS+=("release-${{ github.run_id }}-${{ github.run_attempt }}")
+          #if [ "${{ github.run_attempt }}" -eq 1 ]
+          #then
+          #  LABELS+=("latest")
+          #fi
+        else
+          # Branch build
+          LABELS+=("branch-$BRANCH_NAME-${{ github.run_id }}-${{ github.run_attempt }}")
+          LABELS+=("branch-$BRANCH_NAME")
+        fi
+        LABELS+=("latest")
+        for LABEL in ${LABELS[@]}
+        do
+          BUILD_TAGS+=("$IMAGE_NAME:$LABEL")
+        done
+        # Convert to arguments list
+        echo "BUILD_TAGS<<EOF" >> "$GITHUB_ENV"
+        (IFS=$'\n'; echo "${BUILD_TAGS[*]}") >> "$GITHUB_ENV"
+        echo "EOF" >> "$GITHUB_ENV"
+    - name: Build and push image
+      id: build-and-push
+      uses: docker/build-push-action@v4
+      with:
+        context: .
+        labels: ${{ env.IMAGE_LABELS }}
+        tags: ${{ env.BUILD_TAGS }}
+        cache-from: type=gha
+        cache-to: type=gha,mode=max
+        push: true
+
+
+    - name: Deploy application
+      id: deploy
+      run: |
+        aws ecs update-service --force-new-deployment --service ${{ vars.SERVICE_NAME }} --cluster ${{ vars.CLUSTER_NAME }}
+
+    - name: Generate job summary
+      run: |
+        cat <<'EOF' >> "$GITHUB_STEP_SUMMARY"
+        <details>
+        <summary>Image tags</summary>
+
+        ```
+        ${{ env.BUILD_TAGS }}
+        ```
+        </details>
+        Note: the image was built for AMD64 architecture
+
+        To use the image locally, authenticate to the ECR (use `get-login-password` command):
+
+        ```
+        aws --region ${{ vars.AWS_REGION }} ecr get-login-password         | docker login --username AWS --password-stdin ${{ vars.ECR_REGISTRY }}
+        ```
+        and then pull the image:
+
+        ```
+        docker pull ${{ env.IMAGE_NAME }}@${{ steps.build-and-push.outputs.digest }}
+        ```
+        Deployment can be accessed at [https://${{ vars.ENDPOINT_URL }}](https://${{ vars.ENDPOINT_URL }})
+        EOF

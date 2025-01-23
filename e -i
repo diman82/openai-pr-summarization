@@ -1,0 +1,537 @@
+[33mcommit 763e3ffeffeb4f30e3a29f31756dd0673c2a2c48[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mDS3-2464-add-spinner-in-openai-webapp-when-any-logic-is-running[m[33m)[m
+Author: diman82 <diman82@gmail.com>
+Date:   Fri Jan 24 00:39:09 2025 +0200
+
+    updated all packages
+
+[33mcommit 2dc2f71173abf6827d1409654a9e0bc569364884[m
+Merge: 2e21964 72258d4
+Author: Dima Medvedev <dimam@seekingalpha.com>
+Date:   Fri Sep 1 11:35:11 2023 +0300
+
+    Merge remote-tracking branch 'origin/DS3-2464-add-spinner-in-openai-webapp-when-any-logic-is-running' into DS3-2464-add-spinner-in-openai-webapp-when-any-logic-is-running
+    
+    # Conflicts:
+    #       main.py
+
+[33mcommit 2e2196493f1aed5f5e65f905a4aec61b1b900a62[m
+Author: Dima Medvedev <dimam@seekingalpha.com>
+Date:   Fri Sep 1 11:34:37 2023 +0300
+
+    spinner tryouts
+
+[33mcommit 72258d45482ca8f2997517ab9197564a7fa393d5[m
+Author: Dima Medvedev <dimam@seekingalpha.com>
+Date:   Wed Aug 30 17:32:29 2023 +0300
+
+    added spinner
+
+[33mcommit 2f6f525eb83a97ca7bf0443523789ee3632e5c40[m[33m ([m[1;32mmaster[m[33m)[m
+Merge: 876d93b 4667a59
+Author: diman82 <diman82@gmail.com>
+Date:   Thu Aug 17 16:56:44 2023 +0300
+
+    Merge pull request #26 from seekingalpha/DS3-2454-allow-user-to-override-bullet-points-creation-in-the-PR-summarization-tool
+    
+    return ntlk (required by llama)
+
+[33mcommit 4667a594e073e2fa90e5c1a672460359cfa960d3[m
+Author: Dima Medvedev <dimam@seekingalpha.com>
+Date:   Thu Aug 17 16:56:10 2023 +0300
+
+    return ntlk (required by llama)
+
+[33mcommit 876d93b10eace6f0bb903a458631bdc721e7ceb3[m
+Merge: 176869a bd1f5c2
+Author: diman82 <diman82@gmail.com>
+Date:   Thu Aug 17 16:21:48 2023 +0300
+
+    Merge pull request #25 from seekingalpha/DS3-2454-allow-user-to-override-bullet-points-creation-in-the-PR-summarization-tool
+    
+    fix for llama logic
+
+[33mcommit bd1f5c292e5e0f4aa609be7db3c4d650f60d9733[m
+Author: Dima Medvedev <dimam@seekingalpha.com>
+Date:   Thu Aug 17 15:57:04 2023 +0300
+
+    fix for llama logic
+
+[33mcommit 176869aa245f8870839da2e1d16e5607220cc808[m
+Merge: bb775d2 20481ca
+Author: diman82 <diman82@gmail.com>
+Date:   Tue Aug 15 13:14:34 2023 +0300
+
+    Merge pull request #24 from seekingalpha/DS3-2454-allow-user-to-override-bullet-points-creation-in-the-PR-summarization-tool
+    
+    substituted slider to checkbox
+
+[33mcommit 20481ca69e41b0f4cb2e6856aadce3f5a5a86c9a[m
+Author: Dima Medvedev <dimam@seekingalpha.com>
+Date:   Tue Aug 15 13:13:57 2023 +0300
+
+    substituted slider to checkbox
+
+[33mcommit bb775d2afed77fddc451a144dfd951b5d9df0474[m
+Merge: 9c69afa ac3c161
+Author: diman82 <diman82@gmail.com>
+Date:   Tue Aug 15 10:20:06 2023 +0300
+
+    Merge pull request #23 from seekingalpha/DS3-2454-allow-user-to-override-bullet-points-creation-in-the-PR-summarization-tool
+    
+    removed unused import
+
+[33mcommit ac3c161ecdc59aa1d3736e176cfdf1554af277fc[m
+Author: Dima Medvedev <dimam@seekingalpha.com>
+Date:   Tue Aug 15 10:19:20 2023 +0300
+
+    removed unused import
+
+[33mcommit 9c69afa294bab64ac8ce813318ddc8addc602fad[m
+Merge: ececd58 9de456c
+Author: diman82 <diman82@gmail.com>
+Date:   Tue Aug 15 09:32:20 2023 +0300
+
+    Merge pull request #22 from seekingalpha/DS3-2454-allow-user-to-override-bullet-points-creation-in-the-PR-summarization-tool
+    
+    added bullet points toggle switch
+
+[33mcommit 9de456ce32ffc63006fe968e8236f59c8a2db78f[m
+Author: Dima Medvedev <dimam@seekingalpha.com>
+Date:   Tue Aug 15 00:01:54 2023 +0300
+
+    added bullet points toggle switch
+
+[33mcommit ececd589155acc54ed9c4c5a4e9de9d2ea806569[m
+Merge: ec08f1f 195f3ee
+Author: diman82 <diman82@gmail.com>
+Date:   Wed Jun 21 17:50:58 2023 +0300
+
+    Merge pull request #21 from seekingalpha/create-optional-section-in-setup-py
+    
+    added an option for extra package (llama-index)
+
+[33mcommit 195f3ee1fd9438d9b9e1e411eb0f4334d47f7b1c[m
+Author: Dima Medvedev <dimam@seekingalpha.com>
+Date:   Wed Jun 21 17:44:16 2023 +0300
+
+    added an option for extra package (llama-index)
+
+[33mcommit ec08f1f10b869b88be4026a210998b19a889a6e5[m
+Merge: f3cee30 5714189
+Author: diman82 <diman82@gmail.com>
+Date:   Tue Jun 20 20:19:42 2023 +0300
+
+    Merge pull request #20 from seekingalpha/update-llama-index-package
+    
+    update llama-index package
+
+[33mcommit 57141898484df4bbd7e63e2bebaa9d426bb0880a[m
+Author: Dima Medvedev <dimam@seekingalpha.com>
+Date:   Tue Jun 20 20:19:23 2023 +0300
+
+    fix for llama logic
+
+[33mcommit fc958db94a68d00c4e0096719e31a37336abe9fb[m
+Author: Dima Medvedev <dimam@seekingalpha.com>
+Date:   Tue Jun 20 20:10:42 2023 +0300
+
+    update llama-index package
+
+[33mcommit f3cee30d8248a72f9acec497ada444c4b7396b52[m
+Merge: 12cd9a7 351e90c
+Author: diman82 <diman82@gmail.com>
+Date:   Thu Jun 15 11:44:02 2023 +0300
+
+    Merge pull request #19 from seekingalpha/fix-unnecessary-st-package-import-for-lib-usage
+    
+    Fix unnecessary st package import for lib usage
+
+[33mcommit 351e90cde0950441dbc9ddddf77f875ad84ab4d6[m
+Author: Dima Medvedev <dimam@seekingalpha.com>
+Date:   Thu Jun 15 11:16:29 2023 +0300
+
+    final fixes to missing streamlit lib
+
+[33mcommit bf47d9cfbe1441cf0501e52553315ebaf8e9ea84[m
+Author: Dima Medvedev <dimam@seekingalpha.com>
+Date:   Thu Jun 15 11:06:41 2023 +0300
+
+    addressed an issue with missing streamlit lib in imported package
+
+[33mcommit 12cd9a7a89d621b6cfbae08d698168cdfe0b0a68[m
+Merge: 9e545c2 243e2f6
+Author: maor-sa <43030613+maor-sa@users.noreply.github.com>
+Date:   Tue Jun 13 13:27:23 2023 +0300
+
+    Merge pull request #18 from seekingalpha/ds3-2200-openai-extract-gaap-values
+    
+    ds3-2200 edit get_tables_from_html
+
+[33mcommit 243e2f6a44e35f64c127902d36643ca8119a0726[m
+Merge: 5be13c8 b0d4d14
+Author: Dima Medvedev <dimam@seekingalpha.com>
+Date:   Tue Jun 13 11:24:22 2023 +0300
+
+    Merge branch 'ds3-000-html-get-tables' into ds3-2200-openai-extract-gaap-values
+
+[33mcommit b0d4d142912bbcb685bdd39539553c83a7c65740[m
+Author: Dima Medvedev <dimam@seekingalpha.com>
+Date:   Tue Jun 13 11:21:05 2023 +0300
+
+    updated package version and README.md doc
+
+[33mcommit 5be13c803837d3ec7432b66573e471411a172db8[m
+Author: maor-sa <maor@seekingalpha.com>
+Date:   Mon Jun 12 12:34:22 2023 +0300
+
+    ds3-2200 edit get_tables_from_html
+
+[33mcommit 9e545c20791ed8cdcfea68792e3f6bb8a63e317d[m
+Merge: 3150d61 32c1298
+Author: diman82 <diman82@gmail.com>
+Date:   Tue Jun 6 22:10:57 2023 +0300
+
+    Merge pull request #17 from seekingalpha/update-package-name
+    
+    changed package name and added include clause
+
+[33mcommit 32c1298b055fc6d83d7dcfcc9d0a171361fe3dd5[m
+Author: Dima Medvedev <dimam@seekingalpha.com>
+Date:   Tue Jun 6 22:10:14 2023 +0300
+
+    changed package name and added include clause
+
+[33mcommit 3150d61094837cfe30cff7b0c420681ab266c73e[m
+Author: Oleksii Morozenko <oleksiim@seekingalpha.com>
+Date:   Tue May 30 02:02:10 2023 -0400
+
+    Add manual workflow trigger option
+
+[33mcommit 7b2cf5847a41f128ca8dfffdf3c5ef023d222db4[m
+Author: Oleksii Morozenko <oleksiim@seekingalpha.com>
+Date:   Tue May 30 02:00:01 2023 -0400
+
+    Add unconditional 'latest' container image tag to not to brake PR deployments
+
+[33mcommit 8035660eb326b70842fdcd7c5c7d3da178c64ddc[m
+Merge: 44e8be4 c1da1e0
+Author: diman82 <diman82@gmail.com>
+Date:   Mon May 29 22:48:53 2023 +0300
+
+    Merge pull request #16 from seekingalpha/DS3-2213-Add-authentication-to-streamlit-app
+    
+    basic auth is working
+
+[33mcommit c1da1e075eabcac87da627e42f13a06b88adc166[m
+Author: Dima Medvedev <dimam@seekingalpha.com>
+Date:   Mon May 29 22:41:46 2023 +0300
+
+    basic auth is working
+
+[33mcommit 44e8be47909383f76d4e34893b192b1fbb70f268[m
+Merge: 0bf7728 0600de7
+Author: maor-sa <43030613+maor-sa@users.noreply.github.com>
+Date:   Wed May 17 11:37:16 2023 +0300
+
+    Merge pull request #15 from seekingalpha/ds3-000-html-get-tables
+    
+    ds3-000 html get tables
+
+[33mcommit 0600de7a8dd1fb3b663a0ba5a5d7b552c3f6bc84[m
+Author: maor-sa <maor@seekingalpha.com>
+Date:   Tue May 16 16:03:47 2023 +0300
+
+    ds3-000 html get tables
+
+[33mcommit 0bf77285e1edc62bf7d3cd9306c551d9760fccc8[m
+Author: Oleksii Morozenko <oleksiim@seekingalpha.com>
+Date:   Tue May 16 10:24:42 2023 -0400
+
+    Change deployment trigger
+
+[33mcommit 67fea99ac776960f39efabb7b0cfafe7bc53dd58[m
+Author: Oleksii Morozenko <oleksiim@seekingalpha.com>
+Date:   Tue May 16 01:51:42 2023 -0400
+
+    Add deploy step to CI
+
+[33mcommit 2ed13f40bfd4dae5dc67635b8453347bc788738f[m
+Author: Oleksii Morozenko <oleksiim@seekingalpha.com>
+Date:   Tue May 16 01:46:28 2023 -0400
+
+    Enable CI
+
+[33mcommit 33bf5e0a060b4a600fee3ff9d76e5fa02889fbef[m
+Merge: e941926 e3142ad
+Author: diman82 <diman82@gmail.com>
+Date:   Tue May 9 21:49:09 2023 +0300
+
+    Merge pull request #14 from seekingalpha/fix-package-not-found
+    
+    fix for package not found
+
+[33mcommit e3142ad997fd54bd1c5a6a04bb31328dd56e824f[m
+Author: Dima Medvedev <dimam@seekingalpha.com>
+Date:   Tue May 9 21:48:19 2023 +0300
+
+    fix for package not found
+
+[33mcommit e941926b690bbfc6893507b93980c6a92fa3f740[m
+Merge: 0a458b4 4027705
+Author: diman82 <diman82@gmail.com>
+Date:   Tue May 9 20:49:12 2023 +0300
+
+    Merge pull request #13 from seekingalpha/fix-package-not-found
+    
+    fix for package not found
+
+[33mcommit 402770530a81ca360f51c870578c7af6be177adb[m
+Author: Dima Medvedev <dimam@seekingalpha.com>
+Date:   Tue May 9 20:48:49 2023 +0300
+
+    fix for package not found
+
+[33mcommit 0a458b4b16f34d9baeb9a8c19bc1fb68d01bb216[m
+Merge: abd1d99 bf580b1
+Author: diman82 <diman82@gmail.com>
+Date:   Tue May 9 20:42:06 2023 +0300
+
+    Merge pull request #12 from seekingalpha/add-keys-to-gitignore
+    
+    Add keys to gitignore
+
+[33mcommit bf580b1a08f07fb52c2f76ae2566fd8102a6e8dd[m
+Author: Dima Medvedev <dimam@seekingalpha.com>
+Date:   Tue May 9 20:37:47 2023 +0300
+
+    refactor to create unification in logic
+
+[33mcommit 369cd76e0f611fa3c17fe79d3daec89e19ba27f5[m
+Author: Dima Medvedev <dimam@seekingalpha.com>
+Date:   Tue May 9 20:06:13 2023 +0300
+
+    deleted old keys
+
+[33mcommit abd1d99236539eeb0765ccc9bae9557477091d28[m
+Merge: eddd80b b91751c
+Author: diman82 <diman82@gmail.com>
+Date:   Tue May 9 19:20:52 2023 +0300
+
+    Merge pull request #11 from seekingalpha/fix-for-prompt-and-package-install
+    
+    fixes
+
+[33mcommit b91751c2e86aadc5a8d7881df8b584712b38e939[m
+Author: Dima Medvedev <dimam@seekingalpha.com>
+Date:   Tue May 9 18:29:43 2023 +0300
+
+    fixes
+
+[33mcommit eddd80b30180c020f5d3acc0eeb61dcd8e9c5ecd[m
+Merge: db7e8a9 a3477ae
+Author: diman82 <diman82@gmail.com>
+Date:   Tue May 9 17:00:16 2023 +0300
+
+    Merge pull request #10 from seekingalpha/DS3-2185-Create-a-package-lib-from-openai-pr-summarization-functionality
+    
+    Ds3 2185 create a package lib from openai pr summarization functionality
+
+[33mcommit a3477ae5c17829767216596d17d3094af84c883b[m
+Author: Dima Medvedev <dimam@seekingalpha.com>
+Date:   Tue May 9 16:55:03 2023 +0300
+
+    fixes
+
+[33mcommit e2a20cfd6e6d761fb6b247d9c29066cf38929e3a[m
+Author: Dima Medvedev <dimam@seekingalpha.com>
+Date:   Tue May 9 09:10:25 2023 +0300
+
+    added backbone for external package installation
+
+[33mcommit 608e088d819b5ae6a52618ce86c3fcc4c24611c8[m
+Author: Dima Medvedev <dimam@seekingalpha.com>
+Date:   Mon May 8 11:58:09 2023 +0300
+
+    added setup.py
+
+[33mcommit db7e8a9054bd9417dafbfcd85779def5e3927b06[m
+Merge: c0aee7b 56a127e
+Author: maor-sa <43030613+maor-sa@users.noreply.github.com>
+Date:   Mon Apr 17 15:09:21 2023 +0300
+
+    Merge pull request #9 from seekingalpha/ds3-000-add-url-parser
+    
+    add url parser
+
+[33mcommit 56a127ec2537619adb45dea2579103d076ae2e37[m
+Author: maor-sa <maor@seekingalpha.com>
+Date:   Thu Mar 30 17:35:09 2023 +0300
+
+    add url parser
+
+[33mcommit c0aee7b8a49cc9363f71d47182b6b7d22808687c[m
+Merge: 8c9b14d 3e579be
+Author: diman82 <diman82@gmail.com>
+Date:   Fri Mar 24 22:08:09 2023 +0300
+
+    Merge pull request #7 from seekingalpha/add-docker-support
+    
+    added docker support
+
+[33mcommit 3e579be2aecfe10e1fa377bf8beb0babd44657d9[m
+Author: Dima Medvedev <dimam@seekingalpha.com>
+Date:   Fri Mar 24 22:06:00 2023 +0300
+
+    added docker support
+    small fix
+
+[33mcommit 8c9b14d371c8f70a0945d70ae6697d7caaeaa693[m
+Merge: f516e71 4c0b7e5
+Author: diman82 <diman82@gmail.com>
+Date:   Fri Mar 24 13:51:25 2023 +0300
+
+    Merge pull request #6 from seekingalpha/add-similarity-score
+    
+    added similarity scoring
+
+[33mcommit 4c0b7e5ee33565dfd0af0d5222e81c5cd2c8b9ad[m
+Author: Dima Medvedev <dimam@seekingalpha.com>
+Date:   Thu Mar 23 22:32:34 2023 +0200
+
+    small fix
+
+[33mcommit 34dcd122d3f21bc78bd344d8497fe150baf21001[m
+Author: Dima Medvedev <dimam@seekingalpha.com>
+Date:   Thu Mar 23 21:13:04 2023 +0200
+
+    added similarity scoring
+
+[33mcommit f516e7135c5bac3d9e6d03dc4f6201179ac7b45c[m
+Merge: b3d2a35 ed8807c
+Author: diman82 <diman82@gmail.com>
+Date:   Thu Mar 23 10:33:03 2023 +0200
+
+    Merge pull request #5 from seekingalpha/integrate-new-prompt
+    
+    augmented the prompt a bit
+
+[33mcommit ed8807c1bfa36654bd4245ee16cb4931adca7389[m
+Author: Dima Medvedev <dimam@seekingalpha.com>
+Date:   Wed Mar 22 13:27:32 2023 +0200
+
+    augmented the prompt a bit
+
+[33mcommit b3d2a353a95e63dcfc50cf6e1678d796771e8039[m
+Merge: 9393965 35a9877
+Author: diman82 <diman82@gmail.com>
+Date:   Mon Mar 20 14:27:49 2023 +0200
+
+    Merge pull request #4 from seekingalpha/add-bulletpoint-slider
+    
+    added bullet points selection slider
+
+[33mcommit 35a9877c3bcd2eb28b88be9a7323ec8cef8a3f9f[m
+Author: Dima Medvedev <dimam@seekingalpha.com>
+Date:   Mon Mar 20 10:54:10 2023 +0200
+
+    small fix
+
+[33mcommit b9354a009f43a27db27d791ba3c4a234239629b7[m
+Author: Dima Medvedev <dimam@seekingalpha.com>
+Date:   Mon Mar 20 10:37:11 2023 +0200
+
+    added bullet points selection slider
+
+[33mcommit 9393965961b2056c1fdaa122ae16d74f1b31ce5d[m
+Merge: df818e7 edef00b
+Author: diman82 <diman82@gmail.com>
+Date:   Sun Mar 19 22:18:44 2023 +0200
+
+    Merge pull request #3 from seekingalpha/update-to-gpt-4
+    
+    Update to gpt 4
+
+[33mcommit edef00b52f06f525b79b16672bdf508b91ddf803[m
+Author: Dima Medvedev <dimam@seekingalpha.com>
+Date:   Sun Mar 19 18:32:35 2023 +0200
+
+    added token count field
+
+[33mcommit d76c50a550e533fbe1f8c81e58792aab2638aaa8[m
+Author: Dima Medvedev <dimam@seekingalpha.com>
+Date:   Sun Mar 19 18:15:05 2023 +0200
+
+    fixed len logic
+
+[33mcommit ad607765c0a56947938c2e733334c75868cb4263[m
+Author: Dima Medvedev <dimam@seekingalpha.com>
+Date:   Sun Mar 19 15:56:22 2023 +0200
+
+    updated to gpt-4
+
+[33mcommit df818e7451114e343dbd4f7fbdfcf8d555bb66f2[m
+Merge: b45ef80 577c389
+Author: diman82 <diman82@gmail.com>
+Date:   Thu Mar 16 12:54:54 2023 +0200
+
+    Merge pull request #2 from seekingalpha/DS3-2064-process-long-text-using-llama-index
+    
+    added LlamaIndex vectorization (embeddings) engine
+
+[33mcommit 577c3891347f5d5dda1ed5a84d2673a144a335af[m
+Author: Dima Medvedev <dimam@seekingalpha.com>
+Date:   Thu Mar 16 12:54:30 2023 +0200
+
+    refactored a bit more
+
+[33mcommit d7b3d2d7f14d4ab694d3e399959703dfcbb27222[m
+Author: Dima Medvedev <dimam@seekingalpha.com>
+Date:   Thu Mar 16 12:32:27 2023 +0200
+
+    refactored a bit more
+
+[33mcommit c2bd89470df0c6741bd65d6fe7e6f82d2f588f18[m
+Author: Dima Medvedev <dimam@seekingalpha.com>
+Date:   Wed Mar 15 15:48:46 2023 +0200
+
+    added LlamaIndex vectorization (embeddings) engine
+    some code refactoring
+
+[33mcommit b45ef80d13c918cbaedf7841f2200cdc0e32116b[m
+Merge: be02660 53b50f8
+Author: diman82 <diman82@gmail.com>
+Date:   Tue Mar 7 19:49:39 2023 +0200
+
+    Merge pull request #1 from seekingalpha/DS3-2063-Create-initial-app-backbone-using-streamlit
+    
+    initial commit - all backbone is ready
+
+[33mcommit 53b50f8a0588bdcb3871c62759fb49affae1a117[m
+Author: Dima Medvedev <dimam@seekingalpha.com>
+Date:   Tue Mar 7 19:49:39 2023 +0200
+
+    added bulleting option to output
+
+[33mcommit 65aea24603e1a6c6493bb10f4f6f4cd93ad086f0[m
+Author: Dima Medvedev <dimam@seekingalpha.com>
+Date:   Tue Mar 7 02:45:12 2023 +0200
+
+    added splitting by paragraph
+
+[33mcommit 06dc9d0cba0ef3c1961c966e634a238e37a699ed[m
+Author: Dima Medvedev <dimam@seekingalpha.com>
+Date:   Tue Mar 7 02:09:55 2023 +0200
+
+    further refactor
+
+[33mcommit 68b5e1a8ffc02ee4470df488e19df92c25596569[m
+Author: Dima Medvedev <dimam@seekingalpha.com>
+Date:   Tue Mar 7 01:23:29 2023 +0200
+
+    tiny refactor
+
+[33mcommit 13808ea14d410c9af2c070f5c22fe87319baf809[m
+Author: Dima Medvedev <dimam@seekingalpha.com>
+Date:   Tue Mar 7 00:49:58 2023 +0200
+
+    initial commit, no text split for the moment being
